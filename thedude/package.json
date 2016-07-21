@@ -15,7 +15,7 @@
     "npm": ">=1.4.28"
   },
   "scripts": {
-    "test": "grunt test",
+    "test": "grunt test"
   },
   "dependencies": {
     "acl": "~0.4.4",
