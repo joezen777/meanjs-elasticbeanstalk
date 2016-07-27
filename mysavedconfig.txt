@@ -1,0 +1,45 @@
+EnvironmentConfigurationMetadata:
+  DateCreated: '1469638962000'
+  DateModified: '1469638962000'
+SolutionStack: 64bit Amazon Linux 2016.03 v2.1.3 running Node.js
+OptionSettings:
+  aws:elasticbeanstalk:command:
+    BatchSize: '30'
+    BatchSizeType: Percentage
+    DeploymentPolicy: Rolling
+  aws:elasticbeanstalk:sns:topics:
+    Notification Endpoint: ''
+  aws:elb:policies:
+    ConnectionDrainingEnabled: true
+    ConnectionDrainingTimeout: '20'
+  aws:elb:loadbalancer:
+    LoadBalancerHTTPSPort: '443'
+    CrossZone: true
+    SSLCertificateId: arn:aws:acm:us-east-1:661744025157:certificate/1baf8f59-02f0-477b-80f3-063589da5823
+  aws:elasticbeanstalk:environment:
+    ServiceRole: aws-elasticbeanstalk-service-role
+    EnvironmentType: LoadBalanced
+  aws:elasticbeanstalk:application:
+    Application Healthcheck URL: ''
+  aws:elasticbeanstalk:healthreporting:system:
+    AWSEBHealthdGroupId: 0aae1b36-2a01-4dfd-a02f-566a414e6d78
+    SystemType: enhanced
+    HealthCheckSuccessThreshold: Ok
+  aws:ec2:vpc:
+    Subnets: subnet-51754209,subnet-8db88da7
+    VPCId: vpc-4031a527
+    ELBSubnets: subnet-51754209,subnet-8db88da7
+    ELBScheme: public
+    AssociatePublicIpAddress: true
+  aws:autoscaling:launchconfiguration:
+    SecurityGroups: sg-886a50f3
+    IamInstanceProfile: aws-elasticbeanstalk-ec2-role
+    InstanceType: t2.small
+    EC2KeyName: UbuntuJosephN
+  aws:autoscaling:updatepolicy:rollingupdate:
+    RollingUpdateType: Health
+    RollingUpdateEnabled: true
+EnvironmentTier:
+  Type: Standard
+  Name: WebServer
+AWSConfigurationTemplateVersion: 1.1.0.0
